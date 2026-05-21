@@ -1,6 +1,8 @@
+brew "defuddle"
 brew "gh"
-brew "nvm"
 brew "mas"
+brew "nvm"
+brew "ripgrep"
 
 cask "cursor"
 

@@ -24,6 +24,7 @@ This repo provisions one specific personal setup. Out-of-scope tooling, bundled 
 - Numbers
 - Pages
 - TestFlight
+- uBlock Origin Lite
 
 ## Excluded apps (installed and managed outside this repo)
 
@@ -32,6 +33,13 @@ This repo provisions one specific personal setup. Out-of-scope tooling, bundled 
 - Okta Verify
 - Privileges
 - Self Service
+- Slack
+- Zoom
+
+## Excluded Cursor extensions
+
+- anysphere.remote-ssh
+- monokai.theme-monokai-pro-vscode
 
 ## Excluded `~/.zshrc` lines
 

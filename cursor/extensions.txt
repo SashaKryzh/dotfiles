@@ -1,3 +1,5 @@
 vscodevim.vim
 eamodio.gitlens
 zaaack.markdown-editor
+esbenp.prettier-vscode
+pkief.material-icon-theme
