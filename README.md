@@ -16,17 +16,22 @@ This will:
 - Install Oh My Zsh (if missing).
 - Symlink `aliases.zsh` and `nvm.zsh` into `~/.oh-my-zsh/custom/` so zsh auto-sources them.
 - Register a git `includeIf` so repos under `~/Developer/sashakryzh/` use the identity in `gitconfig-sashakryzh`.
-- Symlink minimal Cursor settings/keybindings and install the Vim extension.
+- Symlink minimal Cursor settings/keybindings and install the extensions in `cursor/extensions.txt`.
 
 ## Files
 
-| File | Purpose |
-| --- | --- |
-| `bootstrap.sh` | Idempotent installer. Safe to re-run. |
-| `Brewfile` | Homebrew packages and casks. |
-| `.macos` | macOS system defaults. |
-| `aliases.zsh` | Shell aliases. |
-| `nvm.zsh` | Homebrew NVM shell initialization. |
-| `gitconfig-sashakryzh` | Git identity override for personal repos. |
-| `cursor/` | Minimal Cursor overrides and extension list. |
-| `APPS.md` | Apps to install manually on a fresh machine. |
+
+| File                   | Purpose                                      |
+| ---------------------- | -------------------------------------------- |
+| `bootstrap.sh`         | Idempotent installer. Safe to re-run.        |
+| `Brewfile`             | Homebrew packages and casks.                 |
+| `.macos`               | macOS system defaults.                       |
+| `aliases.zsh`          | Shell aliases.                               |
+| `nvm.zsh`              | Homebrew NVM shell initialization.           |
+| `bun.zsh`              | Bun PATH and completions.                    |
+| `gitconfig-sashakryzh` | Git identity override for personal repos.    |
+| `cursor/`              | Minimal Cursor overrides and extension list. |
+| `raycast.md`           | Raycast hotkeys to re-enter manually.        |
+| `APPS.md`              | Apps to install manually on a fresh machine. |
+
+
