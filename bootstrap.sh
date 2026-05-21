@@ -41,9 +41,18 @@ mkdir -p "$HOME/.oh-my-zsh/custom"
 mkdir -p "$HOME/.nvm"
 ln -sfn "$DOTFILES_DIR/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
 ln -sfn "$DOTFILES_DIR/nvm.zsh" "$HOME/.oh-my-zsh/custom/nvm.zsh"
+ln -sfn "$DOTFILES_DIR/bun.zsh" "$HOME/.oh-my-zsh/custom/bun.zsh"
 
 # Use sashakryzh git identity for repos under ~/Developer/sashakryzh/
 git config --global "includeIf.gitdir:$HOME/Developer/sashakryzh/.path" "$DOTFILES_DIR/gitconfig-sashakryzh"
+
+# Install Bun if not already installed
+if [ ! -x "$HOME/.bun/bin/bun" ] && ! command -v bun &>/dev/null; then
+  echo "Installing Bun..."
+  curl -fsSL https://bun.sh/install | bash
+else
+  echo "Bun already installed, skipping."
+fi
 
 # Link Cursor custom overwrites and install the Vim extension
 CURSOR_USER_DIR="$HOME/Library/Application Support/Cursor/User"
