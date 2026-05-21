@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Disable press-and-hold for keys (enables key repeat — essential for Vim)
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set fast key repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+echo "macOS defaults applied."
