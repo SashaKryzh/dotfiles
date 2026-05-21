@@ -1,1 +1,3 @@
 vscodevim.vim
+eamodio.gitlens
+zaaack.markdown-editor
