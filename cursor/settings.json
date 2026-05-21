@@ -1,0 +1,15 @@
+{
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": true,
+  "window.autoDetectColorScheme": true,
+  "cursor.composer.conversationDensity": "compact-ungrouped",
+  "cursor.composer.editorConversationDensity": "detailed",
+  "cursor.composer.textSizeScale": 1.15,
+  "workbench.preferredLightColorTheme": "Default Dark+",
+  "editor.fontSize": 14
+}

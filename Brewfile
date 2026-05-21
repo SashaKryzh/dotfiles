@@ -1,6 +1,4 @@
-# Add tools you want installed via Homebrew
-# Run with: brew bundle
+brew "gh"
+brew "nvm"
 
-# brew "neovim"
-# brew "git"
-# cask "visual-studio-code"
+cask "cursor"
