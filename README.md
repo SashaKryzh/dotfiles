@@ -29,3 +29,4 @@ This will:
 | `nvm.zsh` | Homebrew NVM shell initialization. |
 | `gitconfig-sashakryzh` | Git identity override for personal repos. |
 | `cursor/` | Minimal Cursor overrides and extension list. |
+| `APPS.md` | Apps to install manually on a fresh machine. |
