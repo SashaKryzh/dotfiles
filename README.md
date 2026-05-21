@@ -33,5 +33,7 @@ This will:
 | `cursor/`              | Minimal Cursor overrides and extension list. |
 | `raycast.md`           | Raycast hotkeys to re-enter manually.        |
 | `APPS.md`              | Apps to install manually on a fresh machine. |
+| `AGENTS.md`            | Conventions for AI coding agents (CLAUDE.md is a symlink). |
+| `IGNORE.md`            | Brews/apps/env intentionally excluded — do not re-add. |
 
 
