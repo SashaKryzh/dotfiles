@@ -46,6 +46,9 @@ ln -sfn "$DOTFILES_DIR/bun.zsh" "$HOME/.oh-my-zsh/custom/bun.zsh"
 # Use sashakryzh git identity for repos under ~/Developer/sashakryzh/
 git config --global "includeIf.gitdir:$HOME/Developer/sashakryzh/.path" "$DOTFILES_DIR/gitconfig-sashakryzh"
 
+# Auto-create upstream tracking on first `git push` for new branches
+git config --global push.autoSetupRemote true
+
 # Install Bun if not already installed
 if [ ! -x "$HOME/.bun/bin/bun" ] && ! command -v bun &>/dev/null; then
   echo "Installing Bun..."
