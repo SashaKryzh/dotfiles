@@ -3,3 +3,6 @@ eamodio.gitlens
 zaaack.markdown-editor
 esbenp.prettier-vscode
 pkief.material-icon-theme
+expo.vscode-expo-tools
+expo.vscode-expo-theme
+github.vscode-pull-request-github
