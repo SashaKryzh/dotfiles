@@ -57,11 +57,13 @@ else
   echo "Bun already installed, skipping."
 fi
 
-# Link Cursor custom overwrites and install the Vim extension
+# Seed Cursor settings/keybindings from snapshots only on a fresh machine.
+# These files are migration snapshots, not live config — Cursor writes through
+# symlinks on first save and would corrupt the source of truth.
 CURSOR_USER_DIR="$HOME/Library/Application Support/Cursor/User"
 mkdir -p "$CURSOR_USER_DIR"
-ln -sfn "$DOTFILES_DIR/cursor/settings.json" "$CURSOR_USER_DIR/settings.json"
-ln -sfn "$DOTFILES_DIR/cursor/keybindings.json" "$CURSOR_USER_DIR/keybindings.json"
+[ ! -e "$CURSOR_USER_DIR/settings.json" ] && cp "$DOTFILES_DIR/cursor/settings.json" "$CURSOR_USER_DIR/settings.json"
+[ ! -e "$CURSOR_USER_DIR/keybindings.json" ] && cp "$DOTFILES_DIR/cursor/keybindings.json" "$CURSOR_USER_DIR/keybindings.json"
 
 if command -v cursor &>/dev/null; then
   while IFS= read -r extension; do

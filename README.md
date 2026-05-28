@@ -16,7 +16,7 @@ This will:
 - Install Oh My Zsh (if missing).
 - Symlink `aliases.zsh` and `nvm.zsh` into `~/.oh-my-zsh/custom/` so zsh auto-sources them.
 - Register a git `includeIf` so repos under `~/Developer/sashakryzh/` use the identity in `gitconfig-sashakryzh`.
-- Symlink minimal Cursor settings/keybindings and install the extensions in `cursor/extensions.txt`.
+- Seed Cursor `settings.json` / `keybindings.json` from the snapshots in `cursor/` (only if missing) and install the extensions in `cursor/extensions.txt`.
 
 ## Files
 
