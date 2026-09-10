@@ -57,18 +57,4 @@ else
   echo "Bun already installed, skipping."
 fi
 
-# Link Cursor custom overwrites and install the Vim extension
-CURSOR_USER_DIR="$HOME/Library/Application Support/Cursor/User"
-mkdir -p "$CURSOR_USER_DIR"
-ln -sfn "$DOTFILES_DIR/cursor/settings.json" "$CURSOR_USER_DIR/settings.json"
-ln -sfn "$DOTFILES_DIR/cursor/keybindings.json" "$CURSOR_USER_DIR/keybindings.json"
-
-if command -v cursor &>/dev/null; then
-  while IFS= read -r extension; do
-    [ -n "$extension" ] && cursor --install-extension "$extension"
-  done <"$DOTFILES_DIR/cursor/extensions.txt"
-else
-  echo "Cursor CLI not found, skipping extension install."
-fi
-
-echo "Done. Restart your terminal and Cursor for all changes to take effect."
+echo "Done. Restart your terminal for all changes to take effect."
