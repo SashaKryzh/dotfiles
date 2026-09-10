@@ -10,7 +10,7 @@
   "cursor.composer.conversationDensity": "compact-ungrouped",
   "cursor.composer.editorConversationDensity": "detailed",
   "cursor.composer.textSizeScale": 1.15,
-  "workbench.preferredLightColorTheme": "Default Dark+",
+  "workbench.preferredLightColorTheme": "Expo Light",
   "workbench.preferredDarkColorTheme": "Expo Dark",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontSize": 14,
