@@ -1,6 +1,6 @@
 # Agent guide
 
-Personal macOS dotfiles. `bootstrap.sh` is the single entry point and must stay idempotent.
+Personal macOS dotfiles for a fresh Mac, including iOS development. `bootstrap.sh` is the single entry point and must stay idempotent. Do not add migration logic for the current machine.
 
 **Before adding anything during a setup review, read `IGNORE.md`** — it lists brews, apps, and shell env that are intentionally excluded and must not be re-added.
 
@@ -8,7 +8,8 @@ Personal macOS dotfiles. `bootstrap.sh` is the single entry point and must stay 
 
 - **Shell config**: put `*.zsh` files at repo root, symlink them from `bootstrap.sh` into `~/.oh-my-zsh/custom/`. Never edit `~/.zshrc` directly.
 - **Homebrew packages**: add to `Brewfile`. App Store apps go via `mas "name", id: <id>`.
-- **App preferences**: prefer a symlinked config file inside an app-named directory (see `cursor/`). If the app has no portable config format, document it as markdown at repo root (see `raycast.md`).
+- **App preferences**: prefer a config file inside an app-named directory (see `cursor/`). If the app has no portable config format, document it as markdown at repo root (see `raycast.md`).
+- **Editors**: Visual Studio Code is the installed editor. Leave editor settings and extensions unmanaged for now. The `cursor/` files are legacy snapshots; preserve them, but do not install Cursor or apply its configuration.
 - **Manual-only apps**: list them in `APPS.md`.
 - **Git identity**: personal repos under `~/Developer/sashakryzh/` use `gitconfig-sashakryzh` via `includeIf` — already wired in `bootstrap.sh`.
 

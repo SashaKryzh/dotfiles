@@ -1,26 +1,10 @@
-# Apps
+# Manual setup
 
-Apps to install manually on a fresh machine.
+After running `./bootstrap.sh` on a fresh Mac:
 
-## Productivity
+- Install your preferred Xcode version using `xcodes` (installed by Homebrew), or the [App Store](https://apps.apple.com/app/xcode/id497799835).
+- Sign in to installed apps as needed.
+- Restore the Raycast hotkeys documented in `raycast.md`.
 
-- [1Password](https://1password.com/)
-- [Raycast](https://raycast.com/)
-- [Obsidian](https://obsidian.md/)
-- [Shottr](https://shottr.cc/)
-
-## Dev
-
-- [Cursor](https://cursor.com/)
-- [Xcode](https://apps.apple.com/app/xcode/id497799835) (App Store)
-
-## AI
-
-- [Claude](https://claude.ai/download)
-- [ChatGPT](https://openai.com/chatgpt/download/)
-- [Codex](https://chatgpt.com/codex)
-- [cmux](https://cmux.dev/)
-
-## Browser
-
-- [Google Chrome](https://www.google.com/chrome/)
+Visual Studio Code is installed by Homebrew. Editor settings and extensions are
+currently configured manually.
