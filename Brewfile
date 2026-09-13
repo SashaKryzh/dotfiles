@@ -5,6 +5,8 @@ brew "mole"      # Deep clean and optimize your Mac
 brew "nvm"       # Node Version Manager
 brew "ripgrep"   # Fast recursive grep (rg)
 
+cask "android-studio"           # Android IDE and bundled JDK
+cask "android-commandlinetools" # SDK and emulator management without the setup wizard
 cask "cursor"    # AI-powered code editor
 
 # Mac App Store
