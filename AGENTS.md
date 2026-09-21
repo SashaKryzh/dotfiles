@@ -9,7 +9,7 @@ Personal macOS dotfiles for a fresh Mac, including iOS development. `bootstrap.s
 - **Shell config**: put `*.zsh` files at repo root, symlink them from `bootstrap.sh` into `~/.oh-my-zsh/custom/`. Never edit `~/.zshrc` directly.
 - **Homebrew packages**: add to `Brewfile`. App Store apps go via `mas "name", id: <id>`.
 - **App preferences**: prefer a config file inside an app-named directory (see `cursor/`). If the app has no portable config format, document it as markdown at repo root (see `raycast.md`).
-- **Editors**: Visual Studio Code is the installed editor. Leave editor settings and extensions unmanaged for now. The `cursor/` files are legacy snapshots; preserve them, but do not install Cursor or apply its configuration.
+- **Editors**: Visual Studio Code is the installed editor. Leave editor settings and extensions unmanaged for now. The `cursor/` files are legacy snapshots; preserve them, but do not install Cursor or apply its configuration. During setup reviews, skip legacy Cursor snapshots and unmanaged editor settings/extensions when identifying drift.
 - **Manual-only apps**: list them in `APPS.md`.
 - **Git identity**: personal repos under `~/Developer/sashakryzh/` use `gitconfig-sashakryzh` via `includeIf` — already wired in `bootstrap.sh`.
 

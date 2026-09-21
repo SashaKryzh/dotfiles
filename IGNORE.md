@@ -40,6 +40,7 @@ This repo provisions one specific personal setup. Out-of-scope tooling, bundled 
 
 - anysphere.remote-ssh
 - monokai.theme-monokai-pro-vscode
+- redhat.vscode-yaml
 
 ## Excluded `~/.zshrc` lines
 

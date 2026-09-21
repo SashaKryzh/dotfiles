@@ -21,6 +21,9 @@ The Brewfile includes Visual Studio Code, ChatGPT and Claude desktop apps, plus 
 and Claude Code CLIs. After installation, authenticate the CLIs with `codex login`
 and `claude auth login`.
 
+VS Code is the only editor installed by bootstrap. Its settings and extensions
+remain manual; the legacy Cursor snapshots are preserved but not applied.
+
 The Brewfile also installs 1Password, Raycast, Obsidian, Shottr, Google Chrome,
 cmux, T3 Code, and `xcodes` with `aria2` for parallel Xcode downloads. Choose and
 install your Xcode version separately after bootstrap; see `APPS.md`.
@@ -39,6 +42,6 @@ install your Xcode version separately after bootstrap; see `APPS.md`.
 | `gitconfig-sashakryzh` | Git identity override for personal repos.    |
 | `cursor/`              | Legacy snapshots; not applied by bootstrap. |
 | `raycast.md`           | Raycast hotkeys to re-enter manually.        |
-| `APPS.md`              | Apps to install manually on a fresh machine. |
+| `APPS.md`              | Manual steps after bootstrap, including Xcode selection. |
 | `AGENTS.md`            | Conventions for AI coding agents (CLAUDE.md is a symlink). |
 | `IGNORE.md`            | Brews/apps/env intentionally excluded — do not re-add. |

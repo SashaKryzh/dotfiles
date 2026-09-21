@@ -8,6 +8,16 @@
     "command": "-workbench.action.showCommands"
   },
   {
+    "key": "cmd+k",
+    "command": "glass.openActionsPalette",
+    "when": "glassNoModalOpen && isGlassEmptyWorkspace || isGlassEmptyWorkspace && glassActiveModal == 'palette'"
+  },
+  {
+    "key": "shift+cmd+p",
+    "command": "-glass.openActionsPalette",
+    "when": "glassNoModalOpen && isGlassEmptyWorkspace || isGlassEmptyWorkspace && glassActiveModal == 'palette'"
+  },
+  {
     "key": "shift+cmd+k",
     "command": "aipopup.action.modal.generate",
     "when": "editorFocus && !composerBarIsVisible"
