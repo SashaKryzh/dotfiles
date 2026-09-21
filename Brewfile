@@ -7,6 +7,8 @@ brew "nvm"       # Node Version Manager
 brew "ripgrep"   # Fast recursive grep (rg)
 brew "xcodes"    # Install and switch Xcode versions
 
+cask "android-studio"           # Android IDE and bundled JDK
+cask "android-commandlinetools" # SDK and emulator management without the setup wizard
 cask "1password"       # Password manager
 cask "chatgpt"         # OpenAI desktop app
 cask "claude"          # Claude desktop app

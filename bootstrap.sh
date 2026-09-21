@@ -23,6 +23,9 @@ fi
 # Install packages from Brewfile
 brew bundle --file="$(dirname "$0")/Brewfile"
 
+# Configure the Android SDK and ARM64 emulator (accepts package SDK licenses).
+bash "$(dirname "$0")/android-setup.sh" || exit 1
+
 # Apply macOS defaults
 bash "$(dirname "$0")/.macos"
 
@@ -42,6 +45,7 @@ mkdir -p "$HOME/.nvm"
 ln -sfn "$DOTFILES_DIR/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
 ln -sfn "$DOTFILES_DIR/nvm.zsh" "$HOME/.oh-my-zsh/custom/nvm.zsh"
 ln -sfn "$DOTFILES_DIR/bun.zsh" "$HOME/.oh-my-zsh/custom/bun.zsh"
+ln -sfn "$DOTFILES_DIR/android.zsh" "$HOME/.oh-my-zsh/custom/android.zsh"
 
 # Use sashakryzh git identity for repos under ~/Developer/sashakryzh/
 git config --global "includeIf.gitdir:$HOME/Developer/sashakryzh/.path" "$DOTFILES_DIR/gitconfig-sashakryzh"
