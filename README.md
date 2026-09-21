@@ -1,6 +1,6 @@
 # dotfiles
 
-Personal macOS setup.
+Personal setup for a fresh Mac, including iOS and Android development tools.
 
 ## Install
 
@@ -15,9 +15,19 @@ This will:
 - Install Android Studio, configure its bundled Java and a shared Android SDK, accept the required SDK licenses, and create an ARM64 Pixel 9 emulator (Apple Silicon).
 - Apply macOS defaults from `.macos`.
 - Install Oh My Zsh (if missing).
-- Symlink `aliases.zsh` and `nvm.zsh` into `~/.oh-my-zsh/custom/` so zsh auto-sources them.
+- Symlink `aliases.zsh`, `nvm.zsh`, `bun.zsh`, and `android.zsh` into `~/.oh-my-zsh/custom/` so zsh auto-sources them.
 - Register a git `includeIf` so repos under `~/Developer/sashakryzh/` use the identity in `gitconfig-sashakryzh`.
-- Seed Cursor `settings.json` / `keybindings.json` from the snapshots in `cursor/` (only if missing) and install the extensions in `cursor/extensions.txt`.
+
+The Brewfile includes Visual Studio Code, ChatGPT and Claude desktop apps, plus the separate Codex
+and Claude Code CLIs. After installation, authenticate the CLIs with `codex login`
+and `claude auth login`.
+
+VS Code is the only editor installed by bootstrap. Its settings and extensions
+remain manual; the legacy Cursor snapshots are preserved but not applied.
+
+The Brewfile also installs 1Password, Raycast, Obsidian, Shottr, Google Chrome,
+cmux, T3 Code, and `xcodes` with `aria2` for parallel Xcode downloads. Choose and
+install your Xcode version separately after bootstrap; see `APPS.md`.
 
 ## Android development
 
@@ -29,7 +39,7 @@ Run `./bootstrap.sh` to install and configure the tools without the Android Stud
 | File                   | Purpose                                      |
 | ---------------------- | -------------------------------------------- |
 | `bootstrap.sh`         | Idempotent installer. Safe to re-run.        |
-| `Brewfile`             | Homebrew packages and casks.                 |
+| `Brewfile`             | Homebrew packages, including VS Code, ChatGPT/Claude desktop apps and Codex/Claude Code CLIs. |
 | `.macos`               | macOS system defaults.                       |
 | `aliases.zsh`          | Shell aliases.                               |
 | `nvm.zsh`              | Homebrew NVM shell initialization.           |
@@ -38,10 +48,8 @@ Run `./bootstrap.sh` to install and configure the tools without the Android Stud
 | `android.md`          | Android setup and verification instructions. |
 | `bun.zsh`              | Bun PATH and completions.                    |
 | `gitconfig-sashakryzh` | Git identity override for personal repos.    |
-| `cursor/`              | Minimal Cursor overrides and extension list. |
+| `cursor/`              | Legacy snapshots; not applied by bootstrap. |
 | `raycast.md`           | Raycast hotkeys to re-enter manually.        |
-| `APPS.md`              | Apps to install manually on a fresh machine. |
+| `APPS.md`              | Manual steps after bootstrap, including Xcode selection. |
 | `AGENTS.md`            | Conventions for AI coding agents (CLAUDE.md is a symlink). |
 | `IGNORE.md`            | Brews/apps/env intentionally excluded — do not re-add. |
-
-
