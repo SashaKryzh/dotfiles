@@ -8,7 +8,6 @@ This repo provisions one specific personal setup. Out-of-scope tooling, bundled 
 
 ## Excluded brews
 
-- `cocoapods`
 - `colima`
 - `docker`
 - `docker-compose`

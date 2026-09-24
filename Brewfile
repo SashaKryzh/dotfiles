@@ -1,4 +1,5 @@
 brew "aria2"     # Parallel downloads for xcodes
+brew "cocoapods" # Native iOS dependencies for local Expo builds
 brew "defuddle"  # Extract clean markdown from web pages
 brew "gh"        # GitHub CLI
 brew "mas"       # Mac App Store CLI
