@@ -21,7 +21,19 @@ if [ -x /opt/homebrew/bin/brew ]; then
 fi
 
 # Install packages from Brewfile
-brew bundle --file="$(dirname "$0")/Brewfile"
+brew bundle --file="$(dirname "$0")/Brewfile" || exit 1
+
+# Provision Node through NVM; preserve a usable default on subsequent runs.
+export NVM_DIR="$HOME/.nvm"
+mkdir -p "$NVM_DIR" || exit 1
+NVM_PREFIX="$(brew --prefix nvm)" || exit 1
+. "$NVM_PREFIX/nvm.sh" --no-use || exit 1
+if nvm version default >/dev/null 2>&1; then
+  nvm use default || exit 1
+else
+  nvm install --lts || exit 1
+  nvm alias default "$(nvm current)" || exit 1
+fi
 
 # Configure the Android SDK and ARM64 emulator (accepts package SDK licenses).
 bash "$(dirname "$0")/android-setup.sh" || exit 1
@@ -41,7 +53,6 @@ fi
 # Link zsh aliases into oh-my-zsh custom folder
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 mkdir -p "$HOME/.oh-my-zsh/custom"
-mkdir -p "$HOME/.nvm"
 ln -sfn "$DOTFILES_DIR/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
 ln -sfn "$DOTFILES_DIR/nvm.zsh" "$HOME/.oh-my-zsh/custom/nvm.zsh"
 ln -sfn "$DOTFILES_DIR/bun.zsh" "$HOME/.oh-my-zsh/custom/bun.zsh"
