@@ -58,6 +58,20 @@ ln -sfn "$DOTFILES_DIR/nvm.zsh" "$HOME/.oh-my-zsh/custom/nvm.zsh"
 ln -sfn "$DOTFILES_DIR/bun.zsh" "$HOME/.oh-my-zsh/custom/bun.zsh"
 ln -sfn "$DOTFILES_DIR/android.zsh" "$HOME/.oh-my-zsh/custom/android.zsh"
 
+# Link early shell preferences, preserving an existing environment file once.
+ZSH_CONFIG_DIR="${ZDOTDIR:-$HOME}"
+mkdir -p "$ZSH_CONFIG_DIR"
+if [[ -e "$ZSH_CONFIG_DIR/.zshenv" || -L "$ZSH_CONFIG_DIR/.zshenv" ]] && \
+   [[ "$(readlink "$ZSH_CONFIG_DIR/.zshenv")" != "$DOTFILES_DIR/zshenv" ]]; then
+  if [[ -e "$ZSH_CONFIG_DIR/.zshenv.local" || -L "$ZSH_CONFIG_DIR/.zshenv.local" ]]; then
+    echo "Cannot preserve .zshenv: $ZSH_CONFIG_DIR/.zshenv.local already exists." >&2
+    exit 1
+  fi
+  mv "$ZSH_CONFIG_DIR/.zshenv" "$ZSH_CONFIG_DIR/.zshenv.local" || exit 1
+fi
+ln -sfn "$DOTFILES_DIR/shell-preferences.zsh" "$ZSH_CONFIG_DIR/.shell-preferences.zsh"
+ln -sfn "$DOTFILES_DIR/zshenv" "$ZSH_CONFIG_DIR/.zshenv"
+
 # Use sashakryzh git identity for repos under ~/Developer/sashakryzh/
 git config --global "includeIf.gitdir:$HOME/Developer/sashakryzh/.path" "$DOTFILES_DIR/gitconfig-sashakryzh"
 
